@@ -6,3 +6,4 @@ A take on the Godot 3 ["Your First Game" Tutorial](http://docs.godotengine.org/e
 - VSCode as external editor
     - Extensions: C#, Godot Tools
     - [ ] Todo: get run and run scene on F5/F6 in VSCode
+    - [ ] ToDo: good Debugging Tools
