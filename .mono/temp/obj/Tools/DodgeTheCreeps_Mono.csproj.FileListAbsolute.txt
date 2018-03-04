@@ -1,0 +1,6 @@
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\bin\Tools\DodgeTheCreeps_Mono.dll
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\bin\Tools\DodgeTheCreeps_Mono.pdb
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\obj\Tools\DodgeTheCreeps_Mono.csprojResolveAssemblyReference.cache
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\obj\Tools\DodgeTheCreeps_Mono.csproj.CoreCompileInputs.cache
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\obj\Tools\DodgeTheCreeps_Mono.dll
+C:\Users\Moshbit\Documents\Godot\DodgeTheCreeps_Mono\.mono\temp\obj\Tools\DodgeTheCreeps_Mono.pdb
