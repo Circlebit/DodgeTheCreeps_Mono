@@ -4,7 +4,7 @@ using System;
 public class Player : Area2D
 {
     [Export]
-    private int SPEED = 40; // how fast the player will move (pixels/sec)
+    private int SPEED = 400; // how fast the player will move (pixels/sec)
 
 
     private Vector2 velocity; // the player's movement vector
@@ -61,7 +61,7 @@ public class Player : Area2D
         else if (velocity.y != 0)
         {
             animatedSprite.Animation = "up";
-            animatedSprite.FlipV = velocity.y < 0;
+            animatedSprite.FlipV = velocity.y > 0;
         }
     }
 
