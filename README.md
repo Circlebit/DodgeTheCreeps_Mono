@@ -1,6 +1,8 @@
 # DodgeTheCreeps_Mono
 A take on the Godot 3 ["Your First Game" Tutorial](http://docs.godotengine.org/en/latest/getting_started/step_by_step/your_first_game.html) in C#
 
+###This is currently a work in progress and not yet working!
+
 ## Notes
 ### Workflow
 - VSCode as external editor
