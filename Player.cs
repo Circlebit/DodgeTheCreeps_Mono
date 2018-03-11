@@ -3,6 +3,10 @@ using System;
 
 public class Player : Area2D
 {
+    [Signal]
+    public delegate void hit();
+
+
     [Export]
     private int SPEED = 400; // how fast the player will move (pixels/sec)
 
@@ -65,6 +69,26 @@ public class Player : Area2D
         }
     }
 
+    private void _OnPlayerBodyEntered( RigidBody2D body )
+    {
+        Hide();
+        EmitSignal("hit");
+        ((CollisionShape2D)GetNode("CollisionShape2D")).Disabled = true;
+        //QueueFree();
+    }
+
+    private void Start(Vector2 pos)
+    {
+        Position = pos;
+        Show();
+        ((CollisionShape2D)GetNode("CollisionShape2D")).Disabled = false;
+    }
+
+    // private void _OnBodyEntered(Godot.Object body)
+    // {
+    //     ((Node)body).QueueFree();
+    //     QueueFree();
+    // }
 }
 
 public static class GameMath
