@@ -21,7 +21,7 @@ Mob = ExtResource( 2 )
 [node name="MobTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 2.0
 one_shot = false
 autostart = false
 

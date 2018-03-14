@@ -34,28 +34,39 @@ public class Main : Node
         score = 0;
         //GetNode("Player").start)
         //var player = ((Player)(GetNode("Player"));
-        ((Timer)GetNode("StartTimer")).Start();
+        ((Timer)GetNode("StartTimer")).Start();      
     }
 
 
     public void _OnStartTimerTimeout()
     {
-        Console.WriteLine("##### _OnStartTimerTimeout #####");
+        //Console.WriteLine("##### _OnStartTimerTimeout #####");
         ((Timer)GetNode("MobTimer")).Start();
         ((Timer)GetNode("ScoreTimer")).Start();
     }
 
     public void _OnScoreTimerTimeout()
     {
-        Console.WriteLine("##### _OnScoreTimerTimeout #####");
+        //Console.WriteLine("##### _OnScoreTimerTimeout #####");
         score += 1;
     }
 
     public void _OnMobTimerTimeout()
     {
-        Console.WriteLine("##### _OnMobTimerTimeout #####");
+        //Console.WriteLine("##### _OnMobTimerTimeout #####");
         
-        ((PathFollow2D)GetNode("MobPath/MobSpawnLocation")).SetOffset(0.5f); 
+        ((PathFollow2D)GetNode("MobPath/MobSpawnLocation")).SetOffset(0.5f);
+        RigidBody2D mob = (RigidBody2D)Mob.Instance();
+        AddChild(mob);
+
+        float direction = (float)(((PathFollow2D)GetNode("MobPath/MobSpawnLocation")).Rotation + Math.PI/2);
+        ((RigidBody2D)mob).Position = ((PathFollow2D)GetNode("MobPath/MobSpawnLocation")).Position;
+
+        Random rnd = new Random();
+        float pi = (float)Math.PI/4;
+        //direction += (float)rnd.NextDouble() * (pi/4 - (-pi/4)) + pi/4;
+        mob.Rotation = direction;
+        mob.SetLinearVelocity(new Vector2(150, 0).Rotated(direction));
     }
 
 
